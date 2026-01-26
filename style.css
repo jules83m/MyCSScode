@@ -127,9 +127,9 @@
       height: 50%;
       background-color: #000000;
       left: 50%;
-      transform: translateX(-50%);
+     
       top: 0;
-      z-index: 1;
+  
     }
 
     .teeth-row {
