@@ -1,0 +1,36 @@
+body {
+    background-color: #6c635d;
+    font-family: 'Georgia', 'Garamond', 'Palatino', serif;
+    padding: 40px 20px;
+    color: #680909;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+}
+
+.heading {
+     font-family: 'Blackletter', 'Cardo', 'UnifrakturMaguntia', 'Georgia', serif;
+    color: #ca0c0c;
+    text-align: center;
+    margin: 20px;
+    font-size: 48px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.subheading {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    color: #830e0e;
+    font-size: 12px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img{
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    margin: 20px 0;
+    transition: transform 0.3s;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #8b0000;
+}
