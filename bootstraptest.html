@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+       
+        <h1 class="display-1 text-center text-primary mb-5">Urgent Lost Item!!</h1>
+
+
+        <div id="lostThingCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#lostThingCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#lostThingCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#lostThingCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img height = 250 src="https://cdn.mos.cms.futurecdn.net/E5k6NoH45d84QiyzFpjwiZ-1200-80.jpg" class="d-block w-100" alt="Lost item photo 1">
+                </div>
+                <div class="carousel-item">
+                    <img height = 250 src="https://www.immanuel-tours.com/wp-content/uploads/2025/08/Screenshot-2025-08-19-at-11.40.45.png" class="d-block w-100" alt="Lost item photo 2">
+                </div>
+                <div class="carousel-item">
+                    <img height = 250 src="https://www.worldhistory.org/img/c/p/1600x900/14382.jpg" class="d-block w-100" alt="Lost item photo 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#lostThingCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#lostThingCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        
+        <div class="border border-primary border-3 p-4 mb-5 rounded">
+            <h3 class="mb-3">Item Description</h3>
+            <p>I lost the Arc of the Covenant! Any information about its location or appearance would be helpful! If you find anything, please contact me at s_jules.merholz@ousd.org</p>
+        </div>
+
+        
+        <div class="mb-5">
+            <a href="julesprofile.html" class="btn btn-success btn-lg me-3">Go to Profile</a>
+            <a href="senioryearbucketlist.html" class="btn btn-warning btn-sm">View Bucket List</a>
+            <button class="btn btn-danger" disabled>Coming Soon!!</button>
+        </div>
+
+     
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
