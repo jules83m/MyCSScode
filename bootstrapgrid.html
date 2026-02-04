@@ -5,14 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bootstrap columns</title>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px 0;
+      }
+      /* i used cards so they could all be in one element */
+      /* this is for the effect of hovering over cards */
+      .card {
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        border-radius: 12px;
+      }
+      /* this is for the effect of hovering over cards */
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.18);
+      }
+      h1 {
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        font-weight: bold;
+      }
+    </style>
 </head>
 <body>
     <h1 class="text-center my-4">Which ___ am I?</h1>
-    <div class="container text-center">
+    <div class="container text-center py-4">
       <div class="row g-4">
-        <div class="col-12 col-sm-6 col-md-4">
-          <div class="card h-100">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Pinus_jeffreyi_LassenCA.jpg/250px-Pinus_jeffreyi_LassenCA.jpg" class="card-img-top" alt="Pine Tree">
+        <!-- this is breakpoint, which helps customize responsiveness to screen size differences -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 border border-3 border-primary rounded-3 shadow-1g bg-white bg-gradient card-hover">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Pinus_jeffreyi_LassenCA.jpg/250px-Pinus_jeffreyi_LassenCA.jpg" class="card-img-top img-fluid rounded-top" alt="Pine Tree">
             <div class="card-body">
               <h5 class="card-title">Tree</h5>
               <p class="card-text">I am a Pine Tree</p>
@@ -20,9 +45,9 @@
           </div>
         </div>
 
-        <div class="col-12 col-sm-6 col-md-4">
-          <div class="card h-100">
-            <img src="https://ssb.wiki.gallery/images/6/6d/Luigi.png" class="card-img-top" alt="Luigi">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 border border-3 border-success rounded-3 shadow-lg bg-white bg-gradient card-hover">
+            <img src="https://ssb.wiki.gallery/images/6/6d/Luigi.png" class="card-img-top img-fluid rounded-top" alt="Luigi">
             <div class="card-body">
               <h5 class="card-title">Mario Character</h5>
               <p class="card-text">I am Luigi</p>
@@ -30,12 +55,41 @@
           </div>
         </div>
 
-        <div class="col-12 col-sm-6 col-md-4">
-          <div class="card h-100">
-            <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/633.png" class="card-img-top" alt="Deino">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 border border-3 border-warning rounded-3 shadow-lg bg-white bg-gradient card-hover">
+            <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/633.png" class="card-img-top img-fluid rounded-top" alt="Deino">
             <div class="card-body">
               <h5 class="card-title">Pokemon</h5>
               <p class="card-text">I am Deino</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 border border-3 border-danger rounded-3 shadow-lg bg-white bg-gradient card-hover">
+            <img src="https://i.scdn.co/image/ab67616d0000b273e2cb20093d0296ebe7f6783a" class="card-img-top img-fluid rounded-top" alt="Leorio">
+            <div class="card-body">
+              <h5 class="card-title">Hunter X Hunter Character</h5>
+              <p class="card-text">I am Leorio</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 border border-3 border-info rounded-3 shadow-lg bg-white bg-gradient card-hover">
+            <img src="https://www.recipetineats.com/tachyon/2023/10/Pierogi-ruskies_5.jpg" class="card-img-top img-fluid rounded-top" alt="pierogi">
+            <div class="card-body">
+              <h5 class="card-title">Food</h5>
+              <p class="card-text">I am a pierogi</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 border border-3 border-dark rounded-3 shadow-lg bg-white bg-gradient card-hover">
+            <img src="https://m.media-amazon.com/images/I/91CGhuHlmpL._AC_UF894,1000_QL80_.jpg" class="card-img-top img-fluid rounded-top" alt="Diet Pepsi">
+            <div class="card-body">
+              <h5 class="card-title">Soda</h5>
+              <p class="card-text">I am a Diet Pepsi</p>
             </div>
           </div>
         </div>
