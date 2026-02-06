@@ -6,38 +6,85 @@
     <title>bootstrap columns</title>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
-      body {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-        padding: 20px 0;
+      :root{ --a:#00A8E8; --b:#76D6C4; --c:#6F7DFF; }
+      body{
+        background: linear-gradient(135deg,var(--a) 0%,var(--b) 50%,var(--c) 100%);
+        min-height:100vh; padding:24px 0 48px; scroll-behavior:smooth; font-family:system-ui,Segoe UI,Roboto,Arial;
       }
-      /* i used cards so they could all be in one element */
-      /* this is for the effect of hovering over cards */
-      .card {
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-        border-radius: 12px;
+
+    
+      .cool-navbar{
+        background: linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        border-radius:10px;
+        padding:10px 16px; margin:0 16px; box-shadow:0 8px 30px rgba(0,0,0,0.18);
       }
-      /* this is for the effect of hovering over cards */
-      .card-hover:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.18);
-      }
-      h1 {
-        color: white;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-        font-weight: bold;
-      }
+      
+
+      
+
+     
+      .navbar-toggler{ border:none; background:transparent; }
+      .toggler-lines{ width:26px; height:2px; background:#fff; display:block; margin:5px 0; border-radius:2px; transition:transform .18s ease, opacity .18s ease; }
+
+     
+      .dropdown-menu{ background: rgba(255,255,255,0.03); backdrop-filter: blur(6px); border:1px solid rgba(255,255,255,0.04); }
+
+     
+      .card{ box-shadow:0 8px 32px rgba(0,0,0,0.12); transition:transform .25s ease, box-shadow .25s ease; border-radius:12px; }
+      .card-hover:hover{ transform:translateY(-8px); box-shadow:0 12px 48px rgba(0,0,0,0.18); }
+      h1{ color:#fff; text-shadow:2px 2px 8px rgba(0,0,0,0.3); font-weight:700; }
     </style>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg sticky-top cool-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="bootstraptest.html"><span class="brand-dot"></span> CoolNav</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="toggler-lines"></span>
+      <span class="toggler-lines"></span>
+      <span class="toggler-lines"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="bootstraptest.html">Lost Item!</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="julesprofile.html">Link to my profile</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Choose your card
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#card-1">Tree</a></li>
+            <li><a class="dropdown-item" href="#card-2">Luigi</a></li>
+            <li><a class="dropdown-item" href="#card-3">Deino</a></li>
+            <li><a class="dropdown-item" href="#card-4">Leorio</a></li>
+            <li><a class="dropdown-item" href="#card-5">Pierogi</a></li>
+            <li><a class="dropdown-item" href="#card-6">Diet Pepsi</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Coming Soon</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
     <h1 class="text-center   my-4">Which ___ am I?</h1>
     <div class="container text-center py-4">
       <div class="row g-4">
         <!-- this is breakpoint, which helps customize responsiveness to screen size differences -->
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <!-- these are the borders for the cards, each one with a different color  -->
-          <div class="card h-100 border border-3 border-primary rounded-3 shadow-1g bg-white bg-gradient card-hover">
+          <div id="card-1" class="card h-100 border border-3 border-primary rounded-3 shadow-1g bg-white bg-gradient card-hover">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Pinus_jeffreyi_LassenCA.jpg/250px-Pinus_jeffreyi_LassenCA.jpg" class="card-img-top img-fluid rounded-top" alt="Pine Tree">
             <div class="card-body">
               <h5 class="card-title">Tree</h5>
@@ -47,7 +94,7 @@
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 border border-3 border-success rounded-3 shadow-lg bg-white bg-gradient card-hover">
+          <div id="card-2" class="card h-100 border border-3 border-success rounded-3 shadow-lg bg-white bg-gradient card-hover">
             <img src="https://ssb.wiki.gallery/images/6/6d/Luigi.png" class="card-img-top img-fluid rounded-top" alt="Luigi">
             <div class="card-body">
               <h5 class="card-title">Mario Character</h5>
@@ -57,7 +104,7 @@
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 border border-3 border-warning rounded-3 shadow-lg bg-white bg-gradient card-hover">
+          <div id="card-3" class="card h-100 border border-3 border-warning rounded-3 shadow-lg bg-white bg-gradient card-hover">
             <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/633.png" class="card-img-top img-fluid rounded-top" alt="Deino">
             <div class="card-body">
               <h5 class="card-title">Pokemon</h5>
@@ -66,7 +113,7 @@
           </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 border border-3 border-danger rounded-3 shadow-lg bg-white bg-gradient card-hover">
+          <div id="card-4" class="card h-100 border border-3 border-danger rounded-3 shadow-lg bg-white bg-gradient card-hover">
             <img src="https://i.scdn.co/image/ab67616d0000b273e2cb20093d0296ebe7f6783a" class="card-img-top img-fluid rounded-top" alt="Leorio">
             <div class="card-body">
               <h5 class="card-title">Hunter X Hunter Character</h5>
@@ -76,7 +123,7 @@
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 border border-3 border-info rounded-3 shadow-lg bg-white bg-gradient card-hover">
+          <div id="card-5" class="card h-100 border border-3 border-info rounded-3 shadow-lg bg-white bg-gradient card-hover">
             <img src="https://www.recipetineats.com/tachyon/2023/10/Pierogi-ruskies_5.jpg" class="card-img-top img-fluid rounded-top" alt="pierogi">
             <div class="card-body">
               <h5 class="card-title">Food</h5>
@@ -86,7 +133,7 @@
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 border border-3 border-dark rounded-3 shadow-lg bg-white bg-gradient card-hover">
+          <div id="card-6" class="card h-100 border border-3 border-dark rounded-3 shadow-lg bg-white bg-gradient card-hover">
             <img src="https://m.media-amazon.com/images/I/91CGhuHlmpL._AC_UF894,1000_QL80_.jpg" class="card-img-top img-fluid rounded-top" alt="Diet Pepsi">
             <div class="card-body">
               <h5 class="card-title">Soda</h5>
